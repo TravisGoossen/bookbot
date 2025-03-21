@@ -1,7 +1,7 @@
 from stats import count_words, count_characters , sort_dict
 import sys
 
-#Retrieves the text of any provided book
+# Retrieves the text of any provided book
 def get_book_path(filepath):
     with open(filepath) as f:
         file_contents = f.read()
@@ -9,19 +9,19 @@ def get_book_path(filepath):
 
 
 def main():
-    #check if the CLI program is ran properly
-    #if not, exit the program
+    # Check if the CLI program is ran properly
+    # If not, exit the program
     if len(sys.argv) != 2:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
 
-    #set all variables to use cleanly
+    # Set all variables to use cleanly
     book_path = sys.argv[1]
     book_to_analyze = get_book_path(book_path)
     word_count = count_words(book_to_analyze)
     char_count = count_characters(book_to_analyze)
 
-    #The visual part of this program
+    # The visual part of this program
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {book_path}...")
     print("----------- Word Count ----------")

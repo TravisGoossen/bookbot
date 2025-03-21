@@ -1,7 +1,9 @@
+# Counts the number of words in the provided book and returns that number
 def count_words(book_text):
     words = book_text.split()
     return len(words)
 
+# Counts the number of each individual character, including spaces and symbols, and returns a dictionary of (character: count of character)
 def count_characters(book_text):
     char_dict = {}
 
@@ -13,6 +15,7 @@ def count_characters(book_text):
             char_dict[low_char] += 1
     return char_dict
 
+# Takes an imported dictionary and returns a new list, where each item on the list is a dictionary that represents each character with it's count
 def sort_dict(dict):
     def sort_by(dict):
         return dict["count"]
